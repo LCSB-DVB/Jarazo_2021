@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#SBATCH -J MATLAB
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 28
+#SBATCH --time=1-0:0:0
+#SBATCH -p batch
+
+
+module load swenv/default-env/devel
+module load base/MATLAB/2019a
+
+matlab -nodisplay -nosplash -logfile /scratch/users/jjarazo/HCSdata -r Main 
